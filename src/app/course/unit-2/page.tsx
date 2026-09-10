@@ -7,6 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CENTRAL_QUESTION, OBJECTIVES, UNIT2_SESSION } from "@/content/course";
 import { LESSON_BLOCKS } from "@/content/unit2/lesson";
 import { pageMetadata } from "@/lib/site";
+import { PUBLIC_LESSONS, gateHref } from "@/lib/mount";
 
 export const metadata: Metadata = pageMetadata({
   title: "Unit 2 Networks of Exchange",
@@ -31,14 +32,14 @@ export default function Unit2Page() {
         </p>
       </header>
       <div className="flex flex-wrap gap-2">
-        <Button render={<Link href="/learn/unit-2" />}>
+        <Button render={<Link href={PUBLIC_LESSONS[0].path} />}>
           Start the Unit 2 lesson
         </Button>
-        <Button variant="outline" render={<Link href="/practice" />}>
-          Open the stimulus practice set
+        <Button variant="outline" render={<Link href={PUBLIC_LESSONS[1].path} />}>
+          Open the delayed Boccaccio check
         </Button>
-        <Button variant="outline" render={<Link href="/writing" />}>
-          Open the source-based short response
+        <Button variant="outline" render={<a href={gateHref("u2")} />}>
+          Practice and writing after two lessons
         </Button>
       </div>
       <section>

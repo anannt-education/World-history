@@ -4,9 +4,9 @@ import { pageMetadata } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
   title: "Mentor report",
-  description:
-    "Anannt academic staff view of the same local Unit 2 record: exposure, assisted work, independent work, retention, and a next intervention. Not a predicted AP score.",
+  description: "Gated mentor view of the local Unit 2 record. Not indexed.",
   path: "/mentor",
+  index: false,
 });
 
 export default function MentorPage() {

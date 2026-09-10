@@ -1,9 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { Menu } from "lucide-react";
-import { useEffect, useState, type ReactNode } from "react";
+import { useState, type ReactNode } from "react";
 import { PilotBanner, Wordmark } from "@/components/chrome/brand";
 import { RoleSwitcher } from "@/components/chrome/role-switcher";
 import { SiteFooter } from "@/components/chrome/site-footer";
@@ -21,6 +21,7 @@ import {
   isPublicPath,
   PUBLIC_NAV,
 } from "@/lib/site";
+import { PUBLIC_LESSONS } from "@/lib/mount";
 import { useLearner } from "@/lib/store";
 import { cn } from "@/lib/utils";
 
@@ -81,16 +82,10 @@ function NavLinks({
   );
 }
 
-function PublicHeader({
-  onboarded,
-}: {
-  onboarded: boolean;
-}) {
+function PublicHeader() {
   const [open, setOpen] = useState(false);
-  const ctaHref = onboarded ? "/today" : "/onboarding";
-  const ctaLabel = onboarded
-    ? "Continue the Unit 2 loop"
-    : "Set a Unit 2 study plan";
+  const ctaHref = PUBLIC_LESSONS[0].path;
+  const ctaLabel = "Start lesson 1";
 
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background/95 backdrop-blur">
@@ -208,24 +203,13 @@ function ShellFrame({
 export function AppShell({ children }: { children: ReactNode }) {
   const { ready, state } = useLearner();
   const pathname = usePathname();
-  const router = useRouter();
   const publicSurface = isPublicPath(pathname);
   const onboarding = isOnboardingPath(pathname);
   const gated = isGatedPath(pathname);
-  const onboarded = state.onboarding.completed;
 
-  useEffect(() => {
-    if (!ready) return;
-    if (onboarded || !gated) return;
-    const id = window.setTimeout(() => {
-      router.replace("/onboarding");
-    }, 0);
-    return () => window.clearTimeout(id);
-  }, [ready, onboarded, gated, router]);
-
-  if (publicSurface) {
+  if (publicSurface || !gated) {
     return (
-      <ShellFrame header={<PublicHeader onboarded={ready && onboarded} />}>
+      <ShellFrame header={<PublicHeader />}>
         {children}
       </ShellFrame>
     );
@@ -250,26 +234,10 @@ export function AppShell({ children }: { children: ReactNode }) {
     );
   }
 
-  if (!gated) {
-    return (
-      <ShellFrame header={<PublicHeader onboarded={ready && onboarded} />}>
-        {children}
-      </ShellFrame>
-    );
-  }
-
   if (!ready) {
     return (
       <div className="flex min-h-svh items-center justify-center px-4 text-sm text-muted-foreground">
         Restoring the study record saved in this browser…
-      </div>
-    );
-  }
-
-  if (!onboarded && gated) {
-    return (
-      <div className="flex min-h-svh items-center justify-center px-4 text-sm text-muted-foreground">
-        Opening onboarding so we can set an honest Unit 2 plan…
       </div>
     );
   }

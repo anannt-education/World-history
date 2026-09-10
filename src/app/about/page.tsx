@@ -4,12 +4,13 @@ import { FormatYear } from "@/components/chrome/brand";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { EXAM_2027 } from "@/content/exam-2027";
-import { ORG_NAME, PRODUCT_NAME, pageMetadata } from "@/lib/site";
+import { ORG_NAME, pageMetadata } from "@/lib/site";
+import { HONESTY, HONESTY_PILOT, PUBLIC_LESSONS, QUIET_LINE, VOICE } from "@/lib/mount";
 
 export const metadata: Metadata = pageMetadata({
-  title: "About Anannt Education",
+  title: "About this Unit 2 pilot",
   description:
-    "Anannt Education designs original AP World History: Modern curriculum. This About page explains the Unit 2 Networks of Exchange pilot, 2027 format literacy, original items, and independent relationship to the College Board.",
+    "Unit 2 Networks of Exchange. The other eight units are not on this desk. Not nine units. Not a mock engine. Anannt Education, Dubai. Public-domain sources only.",
   path: "/about",
 });
 
@@ -47,10 +48,7 @@ export default function AboutPage() {
           Subject-matter expertise, shown in the work
         </h1>
         <p className="max-w-2xl text-lg text-muted-foreground">
-          {PRODUCT_NAME} is a course product from {ORG_NAME}. This site is a
-          limited Unit 2 (Networks of Exchange) pilot for the May 2027 exam.
-          We infer expertise from sourcing, mechanisms, and honest evidence
-          states — not from rankings or guaranteed scores.
+          {VOICE} {HONESTY} {HONESTY_PILOT} {QUIET_LINE}
         </p>
       </header>
 
@@ -84,8 +82,8 @@ export default function AboutPage() {
       </section>
 
       <div className="flex flex-wrap gap-3">
-        <Button render={<Link href="/onboarding" />}>
-          Set a Unit 2 study plan
+        <Button render={<Link href={PUBLIC_LESSONS[0].path} />}>
+          Start the Unit 2 lesson
         </Button>
         <Button variant="outline" render={<Link href="/help" />}>
           Open Help and FAQ

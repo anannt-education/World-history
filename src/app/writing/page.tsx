@@ -4,9 +4,9 @@ import { pageMetadata } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
   title: "Source-based short response",
-  description:
-    "Write a 2027-style source-based short response on Ibn Battuta and Indian Ocean ports. Anannt feedback is provisional, evidence-linked, and diagnosis-driven — not official AP scoring.",
+  description: "Gated Unit 2 writing studio. After two public lessons this path opens on study.anannt.ae/start.",
   path: "/writing",
+  index: false,
 });
 
 export default function WritingPage() {

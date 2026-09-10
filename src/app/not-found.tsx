@@ -23,15 +23,15 @@ export default function NotFound() {
       <p className="max-w-xl text-muted-foreground">
         This release publishes one Networks of Exchange loop — not a nine-unit
         catalog. If you followed a bookmark, the honest next step is the
-        landing page, Help, or Today if you already set a plan on this device.
+        landing page, Help, or the two public Unit 2 sittings.
       </p>
       <div className="flex flex-wrap gap-2">
         <Button render={<Link href="/" />}>Return to the landing page</Button>
         <Button variant="outline" render={<Link href="/help" />}>
           Open Help
         </Button>
-        <Button variant="outline" render={<Link href="/today" />}>
-          Go to Today
+        <Button variant="outline" render={<Link href="/learn/unit-2" />}>
+          Start the Unit 2 lesson
         </Button>
       </div>
     </div>

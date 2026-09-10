@@ -2,6 +2,16 @@ import Link from "next/link";
 import { EXAM_2027 } from "@/content/exam-2027";
 import { ORG_NAME, PRODUCT_NAME } from "@/lib/site";
 import { Separator } from "@/components/ui/separator";
+import {
+  EXAM_SITTING,
+  HONESTY,
+  HONESTY_PILOT,
+  LEGAL,
+  MONEY_PAGE,
+  PUBLIC_LESSONS,
+  gateHref,
+  whatsappHelpUrl,
+} from "@/lib/mount";
 
 export function SiteFooter() {
   return (
@@ -11,17 +21,34 @@ export function SiteFooter() {
           <div className="space-y-2">
             <p className="font-heading text-lg tracking-tight">{ORG_NAME}</p>
             <p className="text-sm text-muted-foreground">{PRODUCT_NAME}</p>
-            <p className="text-sm text-muted-foreground">
-              Limited Unit 2 (Networks of Exchange) pilot, pinned to the May
-              2027 exam. Original items and diagnosis-linked practice — not a
-              complete self-study course.
-            </p>
+            <p className="text-sm text-muted-foreground">{HONESTY}</p>
+            <p className="text-sm text-muted-foreground">{HONESTY_PILOT}</p>
           </div>
           <nav aria-label="Footer">
             <p className="text-xs font-medium tracking-wide text-muted-foreground uppercase">
               Explore
             </p>
             <ul className="mt-2 space-y-1.5 text-sm">
+              <li>
+                <Link href="/" className="hover:underline">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link href={PUBLIC_LESSONS[0].path} className="hover:underline">
+                  Lesson 1 · Networks of Exchange
+                </Link>
+              </li>
+              <li>
+                <Link href={PUBLIC_LESSONS[1].path} className="hover:underline">
+                  Lesson 2 · Boccaccio check
+                </Link>
+              </li>
+              <li>
+                <Link href="/exam/2027" className="hover:underline">
+                  2027 exam guide
+                </Link>
+              </li>
               <li>
                 <Link href="/about" className="hover:underline">
                   About Anannt Education
@@ -33,43 +60,46 @@ export function SiteFooter() {
                 </Link>
               </li>
               <li>
-                <Link href="/help#privacy" className="hover:underline">
-                  Where work is stored
-                </Link>
-              </li>
-              <li>
-                <Link href="/onboarding" className="hover:underline">
-                  Set a Unit 2 study plan
-                </Link>
-              </li>
-              <li>
                 <Link href="/course" className="hover:underline">
-                  Course map (Unit 2 published)
+                  Honesty map (Unit 2 only)
                 </Link>
+              </li>
+              <li>
+                <a href={gateHref("u2")} className="hover:underline">
+                  After two lessons
+                </a>
+              </li>
+              <li>
+                <a href={whatsappHelpUrl("doubts")} className="hover:underline">
+                  WhatsApp Burjuman
+                </a>
+              </li>
+              <li>
+                <a href={MONEY_PAGE} className="hover:underline">
+                  Talk to a mentor in Burjuman
+                </a>
               </li>
             </ul>
           </nav>
           <div className="space-y-2 text-sm text-muted-foreground">
-            <p className="text-xs font-medium tracking-wide uppercase">
-              2027 format
+            <p className="text-xs font-medium tracking-wide uppercase">2027 sitting</p>
+            <p>
+              {EXAM_SITTING.dateLabel} {EXAM_SITTING.session} · {EXAM_SITTING.localTime}
             </p>
             <p>
-              All three SAQs are required and source-based. The LEQ is a single
-              required prompt, not a menu of three.
-            </p>
-            <p>
-              Official exam specifications are published by the College Board,
-              the source of the AP World History: Modern Course and Exam
-              Description. {ORG_NAME} is independent.
+              All three SAQs are required and source-based. The LEQ is a single required prompt, not
+              a menu of three.
             </p>
           </div>
         </div>
         <Separator className="my-6" />
-        <p className="text-xs leading-relaxed text-muted-foreground">
-          {EXAM_2027.disclaimer} Learner work in this pilot is stored locally in
-          your browser on this device. There is no account and no remote student
-          database. Clearing site data deletes the demo record.
-        </p>
+        <div className="space-y-2 text-xs leading-relaxed text-muted-foreground">
+          <p>{EXAM_2027.disclaimer}</p>
+          <p>{LEGAL.ap}</p>
+          <p>{LEGAL.psat}</p>
+          <p>{LEGAL.supplement}</p>
+          <p>{LEGAL.nap}</p>
+        </div>
       </div>
     </footer>
   );

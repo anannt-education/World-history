@@ -3,9 +3,9 @@ import { ReviewPage } from "@/components/review/review-page";
 import { pageMetadata } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Review and delayed check",
+  title: "Delayed check on a Boccaccio source",
   description:
-    "Delayed independent check on a fresh Boccaccio plague source, plus a targeted review queue. Retained in Anannt’s Unit 2 pilot requires a later check — not an exact repeat of Pegolotti or Kilwa.",
+    "Second public Unit 2 sitting: a delayed check on a fresh Boccaccio plague source. Public-domain translation. Unit 2 pilot — not nine units. Anannt Education, Dubai. No account.",
   path: "/review",
 });
 

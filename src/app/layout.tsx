@@ -9,9 +9,10 @@ import {
   OG_TITLE,
   ORG_NAME,
   PRODUCT_NAME,
-  SITE_URL,
+  SITE_ORIGIN,
   TITLE_BRAND,
 } from "@/lib/site";
+import { absUrl } from "@/lib/mount";
 import "./globals.css";
 
 const sans = Source_Sans_3({
@@ -27,9 +28,9 @@ const serif = Source_Serif_4({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(SITE_URL),
+  metadataBase: new URL(SITE_ORIGIN),
   title: {
-    default: `${PRODUCT_NAME} — Unit 2 pilot from ${ORG_NAME}`,
+    default: OG_TITLE,
     template: `%s | ${TITLE_BRAND}`,
   },
   description: DEFAULT_DESCRIPTION,
@@ -41,9 +42,7 @@ export const metadata: Metadata = {
     "AP World History Modern",
     "Unit 2 Networks of Exchange",
     "2027 AP exam",
-    "Anannt Education",
-    "source-based SAQ",
-    "AP World History practice",
+    "Anannt Education Dubai",
   ],
   openGraph: {
     type: "website",
@@ -51,7 +50,7 @@ export const metadata: Metadata = {
     siteName: PRODUCT_NAME,
     title: OG_TITLE,
     description: OG_DESCRIPTION,
-    url: "/",
+    url: absUrl("/"),
   },
   twitter: {
     card: "summary_large_image",
@@ -63,7 +62,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   alternates: {
-    canonical: "/",
+    canonical: absUrl("/"),
   },
   category: "education",
 };
