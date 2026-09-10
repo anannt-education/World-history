@@ -131,12 +131,12 @@ export function LessonPlayer() {
             onClick={() => {
               completeLesson(patch);
               toast(
-                "Lesson marked complete on this device (exposure plus the checks you submitted). Next: the stimulus set, while the mechanisms are still warm.",
+                "Lesson marked complete on this device. Next: the delayed Boccaccio check — the second public sitting.",
               );
-              router.push("/today");
+              router.push("/review");
             }}
           >
-            Finish lesson and open Today
+            Finish lesson and open the delayed check
           </Button>
         )}
       </div>

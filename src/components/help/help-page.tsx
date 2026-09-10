@@ -101,7 +101,7 @@ export function HelpPage() {
                 toast(
                   "Local study record cleared. Set a new plan when you are ready — every objective will be unassessed again.",
                 );
-                router.push("/onboarding");
+                router.push("/");
               }}
             >
               Reset local study record

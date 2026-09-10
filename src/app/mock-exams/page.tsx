@@ -9,8 +9,9 @@ import { pageMetadata } from "@/lib/site";
 export const metadata: Metadata = pageMetadata({
   title: "Mock exams (locked)",
   description:
-    "The Anannt Unit 2 pilot has no live mock engine. This page teaches the May 2027 AP World History: Modern exam shape — required source-based SAQs and a single LEQ — so students do not practice the wrong task.",
+    "No live mock engine in this Unit 2 pilot. Gated. Not nine units. Not indexed.",
   path: "/mock-exams",
+  index: false,
 });
 
 export default function MockExamsPage() {

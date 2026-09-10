@@ -4,9 +4,9 @@ import { pageMetadata } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
   title: "Today",
-  description:
-    "Today’s Unit 2 tasks for Anannt AP World History: Modern — the next lesson, practice, writing, or delayed check, with evidence-based progress rather than a predicted AP score.",
+  description: "Gated Unit 2 planner. After two public lessons this path opens on study.anannt.ae/start.",
   path: "/today",
+  index: false,
 });
 
 export default function TodayPage() {

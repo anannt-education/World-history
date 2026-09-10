@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { HONESTY, HONESTY_PILOT } from "@/lib/mount";
 import { ORG_NAME } from "@/lib/site";
 
 export function Wordmark({
@@ -26,8 +27,7 @@ export function Wordmark({
 export function PilotBanner() {
   return (
     <p className="border-b border-border bg-muted/60 px-4 py-1.5 text-center text-xs text-muted-foreground">
-      Limited Unit 2 pilot from Anannt Education for the May 2027 exam. Units 1
-      and 3–9 are unpublished. Not a College Board product.
+      {HONESTY} {HONESTY_PILOT}
     </p>
   );
 }

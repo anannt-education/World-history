@@ -5,7 +5,7 @@ import { pageMetadata } from "@/lib/site";
 export const metadata: Metadata = pageMetadata({
   title: "Help and FAQ",
   description:
-    "How Anannt mentorship works, what Anannt Education does and does not do, 2027 AP World History: Modern format changes, accessibility, local storage, and how to use the Unit 2 loop.",
+    "Unit 2 Networks of Exchange. The other eight units are not on this desk. Two public sittings, then the Burjuman gate. Anannt Education, Dubai. Thursday 6 May 2027 Session 1.",
   path: "/help",
 });
 

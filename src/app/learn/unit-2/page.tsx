@@ -6,7 +6,7 @@ import { pageMetadata } from "@/lib/site";
 export const metadata: Metadata = pageMetadata({
   title: "Unit 2 lesson",
   description:
-    "Anannt Education’s Unit 2 lesson on Networks of Exchange, c. 1200–1450: dated schematic map, mechanism-first explanation, worked comparison, sourced Pegolotti task, and retrieval before explanations.",
+    "First public sitting: Networks of Exchange, c. 1200–1450. Dated schematic map, Pegolotti task, retrieval before explanations. Unit 2 pilot — not nine units. No account. Anannt Education, Dubai.",
   path: "/learn/unit-2",
 });
 

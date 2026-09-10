@@ -12,11 +12,12 @@ import {
 } from "@/components/ui/card";
 import { UNITS } from "@/content/course";
 import { pageMetadata } from "@/lib/site";
+import { HONESTY, HONESTY_PILOT, PUBLIC_LESSONS, waitlistHref } from "@/lib/mount";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Course map",
+  title: "Honesty map — Unit 2 only",
   description:
-    "AP World History: Modern unit map from Anannt Education. Unit 2 Networks of Exchange is published in this pilot; Units 1 and 3–9 remain unpublished. Weightings follow the College Board CED.",
+    "Unit 2 Networks of Exchange is on this desk. The other eight units are unpublished. Not nine units. Not a mock engine. Anannt Education, Dubai.",
   path: "/course",
 });
 
@@ -26,11 +27,9 @@ export default function CoursePage() {
       <header className="space-y-2">
         <h1 className="font-heading text-3xl tracking-tight">Course</h1>
         <p className="max-w-2xl text-muted-foreground">
-          Official unit names and published exam weightings from the College
-          Board CED — cited here as the official source. Anannt Education is
-          independent. Only Unit 2 is published in this limited pilot; the
-          gaps are visible on purpose so this is not mistaken for a full
-          self-study course.
+          {HONESTY} {HONESTY_PILOT} Official unit names and published exam weightings from the College
+          Board CED — cited here as the official source. Anannt Education is independent. Units 1 and
+          3–9 are listed so you can see the map. They are not published journeys.
         </p>
       </header>
       <div className="grid gap-3">
@@ -49,14 +48,15 @@ export default function CoursePage() {
             </CardHeader>
             <CardContent>
               {u.published ? (
-                <Button render={<Link href="/course/unit-2" />}>
-                  Open Unit 2 Networks of Exchange
+                <Button render={<Link href={PUBLIC_LESSONS[0].path} />}>
+                  Open the Unit 2 lesson
                 </Button>
               ) : (
                 <p className="text-sm text-muted-foreground">
-                  Unpublished in this pilot. A partial library is not a complete
-                  self-study course. Finish the Unit 2 loop on this device rather
-                  than waiting on units that are not here yet.
+                  Unpublished on this desk.{" "}
+                  <a className="underline underline-offset-2" href={waitlistHref(`u${u.id}`)}>
+                    Ask to be told when Unit {u.id} lesson 1 is ready
+                  </a>
                 </p>
               )}
             </CardContent>

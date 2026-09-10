@@ -4,9 +4,9 @@ import { pageMetadata } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
   title: "Unit 2 stimulus practice",
-  description:
-    "Original Anannt stimulus-based multiple-choice items for Unit 2 Networks of Exchange, labeled for the 2027 AP World History: Modern format. Every option has a rationale. Not AP Classroom questions.",
+  description: "Gated Unit 2 stimulus practice. After two public lessons this path opens on study.anannt.ae/start.",
   path: "/practice",
+  index: false,
 });
 
 export default function PracticePage() {

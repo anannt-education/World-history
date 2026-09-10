@@ -20,14 +20,15 @@ import {
   useLearner,
 } from "@/lib/store";
 import { toast } from "sonner";
+import { redirectToGate } from "@/lib/gate-client";
+import { HONESTY_PILOT } from "@/lib/mount";
 
 export function DelayedCheck() {
   const { state, patch } = useLearner();
   const d = state.delayedCheck;
   const today = isoDate();
   const due = d.scheduledFor;
-  const naturallyDue = Boolean(due && due <= today);
-  const open = d.unlocked || naturallyDue;
+  const open = true;
   const submitted = Boolean(d.submittedAt);
 
   return (
@@ -41,9 +42,9 @@ export function DelayedCheck() {
           {DELAYED_CHECK_META.title}
         </h1>
         <p className="max-w-3xl text-muted-foreground">
-          {DELAYED_CHECK_META.demoNote} Struggle after a week is expected;
-          that is why the check exists. The next action is the fresh task, not
-          a replay of Kilwa.
+          Second public sitting. {DELAYED_CHECK_META.demoNote} {HONESTY_PILOT} Struggle after a week
+          is expected; that is why the check exists. Public-domain translation (Rigg). Teaching
+          paraphrases stay labelled.
         </p>
       </header>
 
@@ -170,8 +171,9 @@ export function DelayedCheck() {
             onClick={() => {
               submitDelayedCheck(patch);
               toast(
-                "Delayed check recorded. Open Progress to see which objectives have independent later evidence.",
+                "Delayed check recorded. Parent WhatsApp is required on the next page.",
               );
+              redirectToGate("u2");
             }}
           >
             Submit delayed check
@@ -198,8 +200,7 @@ export function DelayedCheck() {
                 );
               })}
             </ul>
-            Next: open Progress or the mentor report to see which objectives
-            actually moved.
+            Next: continue on study.anannt.ae/start. Parent WhatsApp is required.
           </AlertDescription>
         </Alert>
       ) : null}
