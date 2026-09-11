@@ -23,7 +23,7 @@ export default function NotFound() {
       <p className="max-w-xl text-muted-foreground">
         This release publishes one Networks of Exchange loop — not a nine-unit
         catalog. If you followed a bookmark, the honest next step is the
-        landing page, Help, or the two public Unit 2 sittings.
+        landing page, Help, or lesson 1.
       </p>
       <div className="flex flex-wrap gap-2">
         <Button render={<Link href="/" />}>Return to the landing page</Button>
