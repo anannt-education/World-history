@@ -42,7 +42,7 @@ export function LandingPage() {
         {PUBLIC_LESSONS.map((lesson, i) => (
           <li key={lesson.id} className="rounded-2xl border border-border bg-card p-5">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-              Lesson {i + 1} · public · Unit 2
+              Lesson {i + 1} · Unit 2
             </p>
             <h2 className="mt-1 font-heading text-2xl">{lesson.title}</h2>
             <p className="mt-2 text-sm text-muted-foreground">
@@ -55,7 +55,7 @@ export function LandingPage() {
               render={<Link href={lesson.path} />}
               variant={i === 0 ? "default" : "outline"}
             >
-              {i === 0 ? "Start lesson 1 — free, no account" : "Open lesson 2"}
+              {i === 0 ? "Start here" : "Open lesson 2"}
             </Button>
           </li>
         ))}
@@ -85,8 +85,8 @@ export function LandingPage() {
       </Card>
 
       <p className="max-w-2xl rounded-xl border border-border bg-muted/40 p-4 text-sm text-muted-foreground">
-        After those two sittings — or if you open practice, writing, or mocks — we send you to
-        study.anannt.ae/start. Parent WhatsApp is required there. Under 13: a parent should finish that
+        After a couple of sittings — or if you open practice, writing, or mocks — you may be asked
+        who is sitting this desk. Still free. Parent WhatsApp is required there. Under 13: a parent should finish that
         form.
       </p>
 
@@ -104,7 +104,7 @@ export function LandingPage() {
           Help
         </Link>
         <a href={gateHref("u2")} className="underline-offset-2 hover:underline">
-          After two lessons
+          Tell us who is sitting
         </a>
       </div>
     </div>

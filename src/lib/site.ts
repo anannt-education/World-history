@@ -19,7 +19,7 @@ export function getSiteUrl() {
 }
 
 export const DEFAULT_DESCRIPTION =
-  "Unit 2 Networks of Exchange only. The other eight units are not on this desk. Two public sittings, no account. Anannt Education, Dubai. Thursday 6 May 2027 Session 1.";
+  "Unit 2 Networks of Exchange only. The other eight units are not on this desk. Start tonight. Anannt Education, Dubai. Thursday 6 May 2027 Session 1.";
 
 export const OG_TITLE = "World History · Unit 2 pilot | Anannt self-prep for AP® World History";
 

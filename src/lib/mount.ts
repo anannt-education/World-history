@@ -29,7 +29,7 @@ export const HONESTY =
   "Unit 2 Networks of Exchange. The other eight units are not on this desk.";
 export const HONESTY_PILOT = "Unit 2 pilot. Not nine units. Not a mock engine.";
 export const QUIET_LINE =
-  "We would rather you finish this idea than buy a package. A person at Office 105 will sit with the exact question if you want one later.";
+  "If you want a person in the room later, we are at Office 105, Bank Street Building, Burjuman Metro Exit 2. You do not need us to begin.";
 export const VOICE =
   "College will hand you a source and wait. Unit 2 is one sitting: a map, a merchant handbook, a check a week later. It is not nine units.";
 

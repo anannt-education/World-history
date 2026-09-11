@@ -66,7 +66,7 @@ export function SiteFooter() {
               </li>
               <li>
                 <a href={gateHref("u2")} className="hover:underline">
-                  After two lessons
+                  Tell us who is sitting
                 </a>
               </li>
               <li>
