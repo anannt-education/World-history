@@ -1,0 +1,38 @@
+{
+  "id": "runner-fixture",
+  "mcq": [
+    {
+      "id": "fixture-mcq-1",
+      "answer": "A"
+    },
+    {
+      "id": "fixture-mcq-2",
+      "answer": "A"
+    },
+    {
+      "id": "fixture-mcq-3",
+      "answer": "A"
+    }
+  ],
+  "saqs": [
+    {
+      "id": "fixture-saq",
+      "rubric": [
+        {
+          "id": "point-1",
+          "description": "Fixture point 1."
+        },
+        {
+          "id": "point-2",
+          "description": "Fixture point 2."
+        },
+        {
+          "id": "point-3",
+          "description": "Fixture point 3."
+        }
+      ]
+    }
+  ],
+  "dbq": null,
+  "leq": null
+}

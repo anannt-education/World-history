@@ -27,7 +27,7 @@ export const PUBLIC_LESSONS = [
 
 export const HONESTY =
   "Unit 2 Networks of Exchange. The other eight units are not on this desk.";
-export const HONESTY_PILOT = "Unit 2 pilot. Not nine units. Not a mock engine.";
+export const HONESTY_PILOT = "Unit 2 pilot. Not nine units. No full mock paper published yet.";
 export const QUIET_LINE =
   "If you want a person in the room later, we are at Office 105, Bank Street Building, Burjuman Metro Exit 2. You do not need us to begin.";
 export const VOICE =

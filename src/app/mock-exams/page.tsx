@@ -3,13 +3,14 @@ import { FormatYear } from "@/components/chrome/brand";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { forms } from "@/content/forms";
 import { EXAM_2027 } from "@/content/exam-2027";
 import { pageMetadata } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
   title: "Mock exams (locked)",
   description:
-    "No live mock engine in this Unit 2 pilot. Gated. Not nine units. Not indexed.",
+    "2027 mock exam format and gated practice sittings.",
   path: "/mock-exams",
   index: false,
 });
@@ -21,17 +22,13 @@ export default function MockExamsPage() {
         <Badge variant="outline">Locked in this pilot</Badge>
         <h1 className="font-heading text-3xl tracking-tight">Mock exams</h1>
         <p className="max-w-2xl text-muted-foreground">
-          There is no live mock engine here, and Anannt will not pretend
-          otherwise. A full 2027 simulation needs reserved forms, section timing,
-          and human review. Use this page to learn the exam shape so you do not
-          practice last year’s task.
+          {forms.length === 0 ? "The timed runner is ready, but no full paper is published yet. Use this page to learn the exam shape while a paper is prepared." : "The timed runner is ready. Use this page to learn the exam shape."}
         </p>
       </header>
       <Alert>
         <AlertTitle>Small screens</AlertTitle>
         <AlertDescription>
-          A full mock is desktop/laptop-first. If this were unlocked, you would
-          be warned before starting on a phone. Official testing is in
+          A full mock is desktop/laptop-first. For a full sitting, use a laptop or desktop if you can. Official testing is in
           Bluebook; this site is not Bluebook and cannot grant official
           accommodations.
         </AlertDescription>
