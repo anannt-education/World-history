@@ -1,0 +1,74 @@
+{
+  "id": "runner-fixture",
+  "title": "runner-fixture — test only",
+  "kind": "runner-fixture",
+  "mcqSets": [
+    {
+      "id": "fixture-set",
+      "source": {
+        "label": "Fixture source",
+        "text": "Fixture source: nothing historical.",
+        "kind": "secondary-text",
+        "period": "fixture"
+      },
+      "questions": [
+        {
+          "id": "fixture-mcq-1",
+          "stem": "Fixture item 1: choose A.",
+          "options": [
+            {
+              "id": "A",
+              "text": "A"
+            },
+            {
+              "id": "B",
+              "text": "B"
+            }
+          ]
+        },
+        {
+          "id": "fixture-mcq-2",
+          "stem": "Fixture item 2: choose A.",
+          "options": [
+            {
+              "id": "A",
+              "text": "A"
+            },
+            {
+              "id": "B",
+              "text": "B"
+            }
+          ]
+        },
+        {
+          "id": "fixture-mcq-3",
+          "stem": "Fixture item 3: choose A.",
+          "options": [
+            {
+              "id": "A",
+              "text": "A"
+            },
+            {
+              "id": "B",
+              "text": "B"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "saqs": [
+    {
+      "id": "fixture-saq",
+      "source": {
+        "label": "Fixture source",
+        "text": "Fixture text.",
+        "kind": "secondary-text",
+        "period": "fixture"
+      },
+      "prompt": "Fixture response: type anything."
+    }
+  ],
+  "dbq": null,
+  "leq": null
+}
